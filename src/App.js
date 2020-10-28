@@ -1,25 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import Splash from './component/Splash';
 
-function App() {
+// !! Do not edit index.js. 
+// Edit this as primary application component
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      hi bye
+      <Splash />
     </div>
   );
 }
-
-export default App;

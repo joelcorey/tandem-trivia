@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Default install left alone. Edit / add things in the App component
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
