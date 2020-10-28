@@ -5,7 +5,7 @@ import './Splash.css';
 export default function Splash() {
 
 	return (
-		<div className="Splash-Container">
+		<div className="splash-container">
 			durrr
 		</div>
 	);
