@@ -7,16 +7,20 @@
 
 .question-question {
   margin: 12% 0 0 0;
+  font-size: 150%;
 }
 
 .question-container ul {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   list-style: none;
-  margin: 2% 0;
+  margin: 2% auto;
   padding: 0;
   align-items: flex-start;
-  width: 100%;
+  width: 70%;
   /* border: solid 1px black; */
 }
 
@@ -24,6 +28,7 @@
 	margin: 8% 0 0 0;
   padding: 8% 0 8% 0;
   /* border: black 1px solid; */
+  font-size: 150%;
   border-radius: 32px;
   min-width: 100%;
   /* https://www.css-gradient.com/ */

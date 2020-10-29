@@ -4,7 +4,10 @@ import './Question.css';
 export default function Question(props) {
 
   const incorrect = props.question.incorrect.map(incorrect => {
-    return <li className="question-item">{incorrect}</li>
+    return <li
+      className="question-item"
+      onClick={props.handleQuestion}
+    >{incorrect}</li>
   });
   console.log(incorrect)
 
