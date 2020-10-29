@@ -15,8 +15,9 @@ export default function App() {
   // Hello random number, you look nice and spicey!
   console.log(questionNumber)
 
-  function handleQuestion(event) {
-    console.log('You clicked something :o !!')
+  function handleQuestion(event, answer) {
+    // event.preventDefault();
+    console.log('You clicked something :o !! ' + answer)
   }
 
   return (
