@@ -27,7 +27,7 @@
 .question-item {
 	margin: 20px 0 0 0;
   padding: 20px 0 20px 0;
-  /* border: black 1px solid; */
+  border: #33538E 1px solid;
   font-size: 150%;
   border-radius: 32px;
   min-width: 100%;
