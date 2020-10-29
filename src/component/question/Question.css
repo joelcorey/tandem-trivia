@@ -6,7 +6,7 @@
 }
 
 .question-question {
-  margin: 12% 0 0 0;
+  margin: 20px 0 0 0;
   font-size: 150%;
 }
 
@@ -17,7 +17,7 @@
   align-items: center;
 
   list-style: none;
-  margin: 2% auto;
+  margin: 20px auto;
   padding: 0;
   align-items: flex-start;
   width: 70%;
@@ -25,8 +25,8 @@
 }
 
 .question-item {
-	margin: 8% 0 0 0;
-  padding: 8% 0 8% 0;
+	margin: 20px 0 0 0;
+  padding: 20px 0 20px 0;
   /* border: black 1px solid; */
   font-size: 150%;
   border-radius: 32px;
