@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Splash from './component/Splash/Splash';
+import Monster from './component/Monster/Monster';
 import Questions from './data/questions/Apprentice_TandemFor400_Data.json';
 import Question from './component/Question/Question';
+
 
 export default function App() {
 
@@ -11,8 +13,6 @@ export default function App() {
   // Get a random question on load with the ability to set it later
   const [questionNumber, setQuestionNumber] = useState(Math.floor(Math.random() * questions.length));
   const [correctAnswer, setCorrectAnswer] = useState(questions[questionNumber].correct)
-
-  // Hello random number, you look nice and spicey!
 
 
   function handleQuestion(event) {
@@ -23,6 +23,10 @@ export default function App() {
 
   return (
     <div className="App">
+
+      <Monster
+        monsterNumber={1}
+      />
 
       <Question
         question={questions[questionNumber]}
