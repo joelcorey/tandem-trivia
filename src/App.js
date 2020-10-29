@@ -9,7 +9,9 @@ export default function App() {
   // If we want to manipulate the questions array later, load it in to state
   const [questions, setQuestions]= useState(Questions);
   // Get a random question on load with the ability to set it later
-  const [questionNumber, setQuestionNumber] = useState(Math.floor(Math.random() * questions.length));
+  //const [questionNumber, setQuestionNumber] = useState(Math.floor(Math.random() * questions.length));
+  const [questionNumber, setQuestionNumber] = useState(0);
+
   // Hello random number, you look nice and spicey!
   console.log(questionNumber)
 

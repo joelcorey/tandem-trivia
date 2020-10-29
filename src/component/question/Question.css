@@ -31,6 +31,8 @@
   font-size: 150%;
   border-radius: 32px;
   min-width: 100%;
+  cursor: pointer;
+
   /* https://www.css-gradient.com/ */
   background: #33538E;
   background: -webkit-linear-gradient(bottom right, #33538E, #D1D3D8);
