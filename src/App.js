@@ -13,7 +13,7 @@ export default function App() {
   // Get a random question on load with the ability to set it later
   const [questionNumber, setQuestionNumber] = useState(Math.floor(Math.random() * questions.length));
   const [correctAnswer, setCorrectAnswer] = useState(questions[questionNumber].correct)
-
+  const [monsterImgSrc, setMonsterImgSrc] = useState('werewolf')
 
   function handleQuestion(event) {
     // event.preventDefault();
@@ -25,7 +25,7 @@ export default function App() {
     <div className="App">
 
       <Monster
-        monsterNumber={1}
+        monsterImgSrc={monsterImgSrc}
       />
 
       <Question

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Monster.css';
 
-import bandit from '/img/bandit.png';
+import bandit from './img/bandit.png';
 import blob from './img/blob.png';
 import cleric from './img/cleric.png';
 import cosmic from './img/cosmic.png';
@@ -11,39 +11,27 @@ import wanderer from './img/wanderer.png';
 import werewolf from './img/werewolf.png';
 
 export default function Monster(props) {
-  const [monsterImgSrc, setMonsterImgSrc] = useState(0)
+
+  const [monsterImgSrc, setMonsterImgSrc] = useState()
 
   useEffect(() => {
-    switch(props.monsterNumber) {
-      case 0:
-        setMonsterImgSrc({bandit});
-        break;
-      case 1:
-        setMonsterImgSrc({blob});
-        break;
-      case 2:
-        setMonsterImgSrc({cleric});
-        break;
-      case 3:
-        setMonsterImgSrc({cosmic});
-        break;
-      case 4:
-        setMonsterImgSrc({rat});
-        break;
-      case 5:
-        setMonsterImgSrc({valkyrie});
-        break;
-      case 6:
-        setMonsterImgSrc({wanderer});
-        break;
-      default:
-        setMonsterImgSrc({werewolf});
-    }
-  }, [props.monsterNumber]);
-  console.log(monsterImgSrc)
+    if (props.monsterImgSrc === 'bandit') setMonsterImgSrc(bandit)
+    if (props.monsterImgSrc === 'blob') setMonsterImgSrc(blob)
+    if (props.monsterImgSrc === 'cleric') setMonsterImgSrc(cleric)
+    if (props.monsterImgSrc === 'cosmic') setMonsterImgSrc(cosmic)
+    if (props.monsterImgSrc === 'rat') setMonsterImgSrc(rat)
+    if (props.monsterImgSrc === 'valkyrie') setMonsterImgSrc(valkyrie)
+    if (props.monsterImgSrc === 'wanderer') setMonsterImgSrc(wanderer)
+    if (props.monsterImgSrc === 'werewolf') setMonsterImgSrc(werewolf)
+  }, monsterImgSrc)
+
+
   return (
     <div className="monster-container">
-      <img src={monsterImgSrc} />
+      <img
+        className="monster-monster"
+        src={monsterImgSrc}
+      />
     </div>
   )
 }
