@@ -13,9 +13,11 @@ export default function App() {
   const [questions, setQuestions]= useState(Questions);
   // Get a random question on load with the ability to set it later
   const [questionNumber, setQuestionNumber] = useState(Math.floor(Math.random() * questions.length));
+  // Set the correct answer for the given question for comparisdon later
   const [correctAnswer, setCorrectAnswer] = useState(questions[questionNumber].correct);
   // When you get a question correct then you "killed it", and then we need to switch monsters
   const [monsterImgSrc, setMonsterImgSrc] = useState('werewolf');
+  // Track health
   const [health, setHealth] = useState(100);
 
   function handleQuestion(event) {
@@ -31,10 +33,6 @@ export default function App() {
     }
 
   }
-
-  // useEffect(() => {
-  //   setHealth(health)
-  // }, health);
 
   return (
     <div className="App">
