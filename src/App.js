@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+
 import Splash from './component/Splash/Splash';
 import Monster from './component/Monster/Monster';
 import Questions from './data/questions/Apprentice_TandemFor400_Data.json';
 import Question from './component/Question/Question';
-
+import HealthBar from './component/HealthBar/HealthBar';
 
 export default function App() {
 
@@ -12,20 +13,35 @@ export default function App() {
   const [questions, setQuestions]= useState(Questions);
   // Get a random question on load with the ability to set it later
   const [questionNumber, setQuestionNumber] = useState(Math.floor(Math.random() * questions.length));
-  const [correctAnswer, setCorrectAnswer] = useState(questions[questionNumber].correct)
-  const [monsterImgSrc, setMonsterImgSrc] = useState('werewolf')
+  const [correctAnswer, setCorrectAnswer] = useState(questions[questionNumber].correct);
+  // When you get a question correct then you "killed it", and then we need to switch monsters
+  const [monsterImgSrc, setMonsterImgSrc] = useState('werewolf');
+  const [health, setHealth] = useState(100);
 
   function handleQuestion(event) {
-    // event.preventDefault();
-    console.log(correctAnswer);
-    console.log('You clicked something :o !! ' + event.target.innerHTML)
+
+    if (correctAnswer !== event.target.innerHTML) {
+      console.log('wrong answer')
+      setHealth(health - 10)
+    }
+
+    // console.log(correctAnswer);
+    // console.log('You clicked something :o !! ' + event.target.innerHTML)
   }
+
+  useEffect(() => {
+    setHealth(health)
+  }, health);
 
   return (
     <div className="App">
 
       <Monster
         monsterImgSrc={monsterImgSrc}
+      />
+
+      <HealthBar
+        health={health}
       />
 
       <Question

@@ -25,13 +25,13 @@ export default function Monster(props) {
     if (props.monsterImgSrc === 'werewolf') setMonsterImgSrc(werewolf)
   }, monsterImgSrc)
 
-
   return (
     <div className="monster-container">
       <img
         className="monster-monster"
         src={monsterImgSrc}
       />
+      {/* <hr /> */}
     </div>
   )
 }

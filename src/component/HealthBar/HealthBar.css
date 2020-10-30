@@ -1,0 +1,10 @@
+.health-bar-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.health-bar {
+  min-height: 1vh;
+  min-width: 100vw;
+  background-color: green;
+}
