@@ -13,7 +13,7 @@ export default function Question(props) {
     }
     tempAnswers.push(props.question.correct)
     setAnswers(tempAnswers)
-  }, [])
+  }, answers)
 
 
   const answersList = answers.map(answer => {

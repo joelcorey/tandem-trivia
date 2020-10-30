@@ -21,17 +21,20 @@ export default function App() {
   function handleQuestion(event) {
 
     if (correctAnswer !== event.target.innerHTML) {
-      console.log('wrong answer')
-      setHealth(health - 10)
+      console.log('Wrong answer!');
+      setHealth(health - 10);
     }
 
-    // console.log(correctAnswer);
-    // console.log('You clicked something :o !! ' + event.target.innerHTML)
+    if (correctAnswer == event.target.innerHTML) {
+      console.log('Correct answer!');
+     setQuestionNumber(Math.floor(Math.random() * questions.length));
+    }
+
   }
 
-  useEffect(() => {
-    setHealth(health)
-  }, health);
+  // useEffect(() => {
+  //   setHealth(health)
+  // }, health);
 
   return (
     <div className="App">
