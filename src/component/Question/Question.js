@@ -3,20 +3,7 @@ import './Question.css';
 
 export default function Question(props) {
 
-  const [answers, setAnswers] = useState(props.question.incorrect)
-
-  useEffect(() => {
-    // working first, then pretty
-    let tempAnswers = []
-    for (let i = 0; i < props.question.incorrect.length; i++) {
-      tempAnswers.push(props.question.incorrect[i])
-    }
-    tempAnswers.push(props.question.correct)
-    setAnswers(tempAnswers)
-  }, answers)
-
-
-  const answersList = answers.map(answer => {
+   const answersList = props.answers.map(answer => {
     return <li
       className="question-item"
       onClick={props.handleQuestion}

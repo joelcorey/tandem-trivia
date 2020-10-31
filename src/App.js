@@ -15,6 +15,8 @@ export default function App() {
   const [questionNumber, setQuestionNumber] = useState(Math.floor(Math.random() * questions.length));
   // Set the correct answer for the given question for comparisdon later
   const [correctAnswer, setCorrectAnswer] = useState(questions[questionNumber].correct);
+  // Pass in the array of incorrect answers as well
+  const [answers, setAnswers] = useState(questions[questionNumber].incorrect)
   // When you get a question correct then you "killed it", and then we need to switch monsters
   const [monsterImgSrc, setMonsterImgSrc] = useState('werewolf');
   // Track health
@@ -29,10 +31,24 @@ export default function App() {
 
     if (correctAnswer == event.target.innerHTML) {
       console.log('Correct answer!');
-     setQuestionNumber(Math.floor(Math.random() * questions.length));
+      let newQuestionNumber = Math.floor(Math.random() * questions.length);
+      setQuestionNumber(newQuestionNumber);
+      //setCorrectAnswer(questions[questionNumber].correct);
     }
 
   }
+
+  useEffect(() => {
+    setCorrectAnswer(questions[questionNumber].correct);
+
+    let temp = questions[questionNumber].incorrect.concat(correctAnswer);
+
+    console.log(temp)
+
+    setAnswers(temp);
+
+    // Watch necessarily variables for updating the dom
+  }, [questionNumber, answers])
 
   return (
     <div className="App">
@@ -47,6 +63,7 @@ export default function App() {
 
       <Question
         question={questions[questionNumber]}
+        answers={answers}
         handleQuestion={handleQuestion}
       />
 
