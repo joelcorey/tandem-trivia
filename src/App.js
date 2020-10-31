@@ -33,7 +33,6 @@ export default function App() {
       console.log('Correct answer!');
       let newQuestionNumber = Math.floor(Math.random() * questions.length);
       setQuestionNumber(newQuestionNumber);
-      //setCorrectAnswer(questions[questionNumber].correct);
     }
 
   }
@@ -42,9 +41,6 @@ export default function App() {
     setCorrectAnswer(questions[questionNumber].correct);
 
     let temp = questions[questionNumber].incorrect.concat(correctAnswer);
-
-    console.log(temp)
-
     setAnswers(temp);
 
     // Watch necessarily variables for updating the dom
