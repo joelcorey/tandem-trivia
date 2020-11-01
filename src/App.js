@@ -41,20 +41,12 @@ export default function App() {
     if (correctAnswer == event.target.innerHTML) {
       console.log('Correct answer!');
 
-      console.log(questions);
-      console.log(questionNumber);
-
       let newQuestions = questions;
       newQuestions.splice(questionNumber, 1);
       setQuestions(newQuestions);
 
-      console.log(questions);
-
       let newQuestionNumber = Math.floor(Math.random() * questions.length);
-      //let newQuestionNumber = questionNumber
       setQuestionNumber(newQuestionNumber);
-
-      console.log(questionNumber);
     }
 
   }
