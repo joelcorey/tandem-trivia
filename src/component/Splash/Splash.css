@@ -2,11 +2,18 @@
 	display: flex;
 	position: absolute;
 	z-index: 10;
-	top: 10%;
-	bottom: 10%;
-	left: 10%;
-	right: 10%;
-	border: black 2px solid;
-	/* width: 75%; */
-	margin: auto;
+	top: 10vh;
+	bottom: 10vh;
+	left: 10vw;
+	right: 10vw;
+  border: black 2px solid;
+  background-color: #ffffff;
+}
+
+.splash-container p {
+  padding: 10px;
+}
+
+.splash-container-noshow {
+	display: none;
 }

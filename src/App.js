@@ -51,6 +51,10 @@ export default function App() {
   return (
     <div className="App">
 
+      <Splash
+        splash={splash}
+      />
+
       <Monster
         monsterImgSrc={monsterImgSrc}
       />

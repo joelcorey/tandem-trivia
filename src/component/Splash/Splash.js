@@ -2,11 +2,26 @@ import React, { useEffect } from 'react';
 
 import './Splash.css';
 
-export default function Splash() {
+function Endgame(props) {
+  return
 
-	return (
-		<div className="splash-container">
-			durrr
-		</div>
-	);
+}
+
+export default function Splash(props) {
+
+  if (props.splash === 'end') {
+    return (
+      <div className="splash-container">
+        <p>
+          Congratulations you reached the end!
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="splash-container-noshow">
+    </div>
+  );
+
 }
