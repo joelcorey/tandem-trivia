@@ -22,9 +22,13 @@ export default function App() {
   // Track health
   const [health, setHealth] = useState(100);
 
-  const [splash, setSplash] = useState('end');
+  const [splash, setSplash] = useState('');
 
   function handleQuestion(event) {
+
+    if (health === 0) {
+      setSplash('dead');
+    }
 
     if (correctAnswer !== event.target.innerHTML) {
       console.log('Wrong answer!');
