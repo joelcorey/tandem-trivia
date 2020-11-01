@@ -23,8 +23,22 @@ export default function App() {
   const [health, setHealth] = useState(100);
   // Set state of informational splash screen to nothing so that is doesn't show up
   const [splash, setSplash] = useState('');
+  // The number of variables here is getting a bit silly, but we need to track turns for each round (10 per round)
+  const [turns, setTurns] = useState(0);
+
+  const [score, setScore] = useState(0);
 
   function handleQuestion(event) {
+
+    // let newScore = score;
+    // newScoore++
+    // setScore(newScore);
+
+    // if (turns >= 9) {
+
+    // }
+
+    //alert(`The correct answer was: ${correctAnswer}`)
 
     // If player health reaches 0 then end the game
     if (health === 0) {
@@ -51,9 +65,12 @@ export default function App() {
 
   }
 
-  function handleStartOver(event) {
-    setHealth(100)
-    setSplash('')
+  function handleStartOver(type) {
+    if (type === 'startOver') {
+      setHealth(100)
+      setSplash('')
+    }
+
   }
 
   useEffect(() => {
