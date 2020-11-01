@@ -11,7 +11,7 @@ export default function Splash(props) {
           Oh no, you ran out of life fighting the evil monsters! You have lossed the game! :( :O
         </p>
         <ul>
-          <li className="splash-item" onClick={props.handleQuestion}>Start over</li>
+          <li className="splash-item" onClick={props.handleStartOver}>Start over</li>
         </ul>
       </div>
     );
