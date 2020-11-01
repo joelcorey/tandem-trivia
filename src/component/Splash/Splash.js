@@ -2,11 +2,6 @@ import React, { useEffect } from 'react';
 
 import './Splash.css';
 
-function Endgame(props) {
-  return
-
-}
-
 export default function Splash(props) {
 
   if (props.splash === 'dead') {
@@ -15,6 +10,9 @@ export default function Splash(props) {
         <p>
           Oh no, you ran out of life fighting the evil monsters! You have lossed the game! :( :O
         </p>
+        <ul>
+          <li className="splash-item" onClick={props.handleQuestion}>Start over</li>
+        </ul>
       </div>
     );
   }

@@ -1,5 +1,6 @@
 .splash-container {
-	display: flex;
+  display: flex;
+  flex-direction: column;
 	position: absolute;
 	z-index: 10;
 	top: 10vh;
@@ -16,4 +17,34 @@
 
 .splash-container-noshow {
 	display: none;
+}
+
+.splash-container ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  list-style: none;
+  margin: 20px auto;
+  padding: 0;
+  align-items: flex-start;
+  width: 70%;
+  /* border: solid 1px black; */
+}
+
+.splash-item {
+	margin: 5px 0 0 0;
+  padding: 5px 0 5px 0;
+  border: #33538E 1px solid;
+  font-size: 150%;
+  border-radius: 32px;
+  min-width: 25%;
+  cursor: pointer;
+
+  /* https://www.css-gradient.com/ */
+  background: #332DF8;
+  background: -webkit-linear-gradient(top left, #332DF8, #DE2A8A);
+  background: -moz-linear-gradient(top left, #332DF8, #DE2A8A);
+  background: linear-gradient(to bottom right, #332DF8, #DE2A8A);
 }
