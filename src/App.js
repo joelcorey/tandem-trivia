@@ -18,9 +18,11 @@ export default function App() {
   // Pass in the array of incorrect answers as well
   const [answers, setAnswers] = useState(questions[questionNumber].incorrect)
   // When you get a question correct then you "killed it", and then we need to switch monsters
-  const [monsterImgSrc, setMonsterImgSrc] = useState('werewolf');
+  const [monsterImgSrc, setMonsterImgSrc] = useState('blob');
   // Track health
   const [health, setHealth] = useState(100);
+
+  const [splash, setSplash] = useState('end');
 
   function handleQuestion(event) {
 
