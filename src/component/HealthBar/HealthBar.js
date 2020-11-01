@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './HealthBar.css';
 
 export default function HealthBar(props) {
-
-  const [health, setHealth] = useState();
 
   return (
 

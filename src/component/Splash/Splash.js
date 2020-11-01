@@ -34,8 +34,11 @@ export default function Splash(props) {
     return (
       <div className="splash-container">
         <p>
-          Congratulations you reached the end!
+          You killed all the questions! Congratulations you reached the end!
         </p>
+        <ul>
+          <li className="splash-item" onClick={() => props.handleStartOver('startOver')}>Start over</li>
+        </ul>
       </div>
     );
   }
