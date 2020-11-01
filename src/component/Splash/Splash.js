@@ -17,6 +17,19 @@ export default function Splash(props) {
     );
   }
 
+  if (props.splash === 'roundEnd') {
+    return (
+      <div className="splash-container">
+        <p>
+          You reached the end of the round! Your current score: {props.score} !!
+        </p>
+        <ul>
+          <li className="splash-item" onClick={() => props.handleStartOver('continue')}>Continue</li>
+        </ul>
+      </div>
+    );
+  }
+
   if (props.splash === 'end') {
     return (
       <div className="splash-container">

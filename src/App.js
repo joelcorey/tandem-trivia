@@ -30,13 +30,19 @@ export default function App() {
 
   function handleQuestion(event) {
 
-    // let newScore = score;
-    // newScoore++
-    // setScore(newScore);
+    let newScore = score;
+    newScore++;
+    setScore(newScore);
+    console.log(score);
 
-    // if (turns >= 9) {
+    let newTurns = turns;
+    newTurns++;
+    setTurns(newTurns);
+    console.log(turns);
 
-    // }
+    if (turns >= 9) {
+      setSplash('roundEnd')
+    }
 
     //alert(`The correct answer was: ${correctAnswer}`)
 
@@ -68,12 +74,22 @@ export default function App() {
   function handleStartOver(type) {
     if (type === 'startOver') {
       setHealth(100)
+      setScore(0);
+      setTurns(0);
+      setSplash('')
+    }
+    if (type === 'continue') {
       setSplash('')
     }
 
   }
 
   useEffect(() => {
+    // This is an ugly workaround. Working first, pretty later. :)
+    if (questionNumber === undefined) {
+      let newQuestionNumber = Math.floor(Math.random() * questions.length);
+      setQuestionNumber(newQuestionNumber);
+    }
     setCorrectAnswer(questions[questionNumber].correct);
 
     let temp = questions[questionNumber].incorrect.concat(correctAnswer);
@@ -88,6 +104,7 @@ export default function App() {
       <Splash
         splash={splash}
         handleStartOver={handleStartOver}
+        score={score}
       />
 
       <Monster
